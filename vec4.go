@@ -261,9 +261,10 @@ func (a Vec4) Quat() Quat {
 	return Quat{a.X, a.Y, a.Z, a.W}
 }
 
-// Vec3 converts this four-vector to three-component one. It's short-hand for:
+// Vec3 converts this four-component vector to a three-component one. It's
+// short-hand for:
 //  Vec3{a.X, a.Y, a.Z}
-func (a Vec3) Vec3() Vec3 {
+func (a Vec4) Vec3() Vec3 {
 	return Vec3{a.X, a.Y, a.Z}
 }
 
