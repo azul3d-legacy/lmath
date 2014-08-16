@@ -50,3 +50,16 @@ func Rounded(v float64) float64 {
 	}
 	return math.Floor(v + 0.5)
 }
+
+// Lerp performs a linear interpolation between a and b. The t parameter is a
+// number in the range 0.0-1.0. Some examples:
+//
+//  Lerp(0, 10, 0) == 0
+//  Lerp(0, 10, 0.5) == 5
+//  Lerp(0, 10, 1) == 10
+//
+// The interpolation method is precise, so it is guaranteed that:
+//  Lerp(a, b, 1) == a
+func Lerp(a, b, t float64) float64 {
+	return (1-t)*a + t*b
+}
